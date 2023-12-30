@@ -2,10 +2,11 @@
 pragma solidity ^0.8.9;
 
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
+import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
 
-contract WiggleFree is ERC721, Ownable {
+contract WiggleFree is ERC721URIStorage, Ownable{
     using Counters for Counters.Counter;
 
     Counters.Counter private _tokenIdCounter;
@@ -13,22 +14,41 @@ contract WiggleFree is ERC721, Ownable {
     mapping(address => uint256) private _tokenIdByAddress;
     
     address[] private _userList;
+    string private _customBaseURI;
 
-    constructor() ERC721("WiggleFree", "WGGFR") {}
+    constructor(string memory customBaseURI_) ERC721("WiggleFree", "WGGFR") {
+        _customBaseURI = customBaseURI_;
+    }
 
-    function safeMint(address _to) public onlyOwner {
+    function safeMint(address _to) public onlyOwner returns (uint256){
         uint256 tokenId = _tokenIdCounter.current();
         _tokenIdCounter.increment();
         _safeMint(_to, tokenId);
+
         _userList.push(_to);
         _tokenIdByAddress[_to] = tokenId;
+        return tokenId;
     }
 
-    function getUserList() public view returns (address[] memory) {
+    function setBaseURI (string memory customBaseURI_) public onlyOwner(){
+         _customBaseURI = customBaseURI_;
+    }
+
+    function _baseURI() internal override view virtual returns (string memory) {
+        return _customBaseURI;
+    }
+
+    function getUserList() public view onlyOwner returns (address[] memory) {
         return _userList;
     }
 
     function getTokenIdByAddress(address _address) public view returns (uint256) {
         return _tokenIdByAddress[_address];
     }
+
+    function getBaseURI() public view returns (string memory){
+    string memory __baseURI = _baseURI();
+    return(__baseURI);
+    }   
+
 }
