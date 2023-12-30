@@ -30,6 +30,7 @@ contract WiggleFree is ERC721URIStorage, Ownable{
         return tokenId;
     }
 
+
     function setBaseURI (string memory customBaseURI_) public onlyOwner(){
          _customBaseURI = customBaseURI_;
     }
@@ -46,9 +47,20 @@ contract WiggleFree is ERC721URIStorage, Ownable{
         return _tokenIdByAddress[_address];
     }
 
-    function getBaseURI() public view returns (string memory){
+    function getBaseURI() public view onlyOwner returns (string memory){
     string memory __baseURI = _baseURI();
     return(__baseURI);
     }   
+
+    
+    //deactivate functions
+    function safeTransferFrom(address from, address to, uint256 tokenId, bytes memory data) public override(IERC721, ERC721) view onlyOwner{
+    }
+
+    function transferFrom(address from, address to, uint256 tokenId) public override(IERC721,ERC721) view onlyOwner{
+    }
+
+    function renounceOwnership() public override(Ownable) view onlyOwner {
+    }
 
 }

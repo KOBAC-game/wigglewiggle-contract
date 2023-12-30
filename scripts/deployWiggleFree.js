@@ -43,3 +43,6 @@ deploymain()
 // version 6(231230 1601) -- polygon mumbai
 // 0x0c09dFbe15ab37067dA726978F7d51C815d54d31
 // 고양이 그림 uri
+
+// version 7(231231 0056) -- polygon mumbai
+// 0xb275ba3BC567A8fbC4F812Fd39098A58952Fb887

@@ -807,8 +807,8 @@
       ]
     },
     "/Users/tinasmac/Desktop/erc-6551-qn-example/contracts/WiggleFree.sol": {
-      "lastModificationDate": 1703912730999,
-      "contentHash": "470047e9f07413af601ed3f0ac9284d6",
+      "lastModificationDate": 1703951373232,
+      "contentHash": "da752d7622e2b6f38adca2bfe00badeb",
       "sourceName": "contracts/WiggleFree.sol",
       "solcConfig": {
         "version": "0.8.19",
