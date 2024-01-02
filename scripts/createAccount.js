@@ -33,6 +33,7 @@ const main = async () => {
   );
   const chainId = await hre.network.provider.send("eth_chainId");
 
+  //nft 민팅 관련 로직
   console.log("Deploying contract...");
   const nftTokenContract = await hre.ethers.deployContract(
     "WiggleFree",
