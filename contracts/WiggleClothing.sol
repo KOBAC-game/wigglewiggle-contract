@@ -72,5 +72,14 @@ contract WiggleClothing is ERC721URIStorage, Ownable{
     } 
 
     //transfer 관련 함수 추가해야함
-    //인출 기능 만들어야 함.
+    function withdraw(uint amount, address to) onlyOwner() public {
+        require(address(this).balance >= amount, "Insufficient funds");
+
+        payable(to).transfer(amount);
+    }
+
+// ETH를 받을 수 있도록 receive 함수 구현
+    receive() external payable {}
+
+    
 }

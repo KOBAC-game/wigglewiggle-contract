@@ -1028,8 +1028,8 @@
       ]
     },
     "/Users/tinasmac/Desktop/wigglewiggle-contract/contracts/WiggleClothing.sol": {
-      "lastModificationDate": 1704610885605,
-      "contentHash": "14378431f7f2857cf3544d755c99a041",
+      "lastModificationDate": 1704747702589,
+      "contentHash": "2b49f1e7427c7fc31523955180b84b65",
       "sourceName": "contracts/WiggleClothing.sol",
       "solcConfig": {
         "version": "0.8.19",
