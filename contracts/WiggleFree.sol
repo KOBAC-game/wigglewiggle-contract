@@ -18,7 +18,7 @@ contract WiggleFree is ERC721URIStorage, Ownable{
 
     event TokenMinted(address indexed to, uint256 tokenId);
 
-    constructor(string memory customBaseURI_) ERC721("WiggleFree", "WGGFR") {
+constructor(string memory customBaseURI_) ERC721("WiggleFree", "WGGFR") {
         _customBaseURI = customBaseURI_;
     }
 

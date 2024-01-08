@@ -9,7 +9,7 @@ const signer = new ethers.Wallet(process.env.PRIVATE_KEY, provider);
 async function deploymain() {
   const wiggleFreeContract = await hre.ethers.deployContract(
     "WiggleFree",
-    ["ipfs://QmQufv82DPxMzKKGbKACUuTbnAoNqC9jUDAVLn7avxXq8C"],
+    ["ipfs://QmfGQqgwYVHP1BJqARz2CxDzqvF9W5tWfvrZLbusWBUqqX"],
     signer
   );
   await wiggleFreeContract.waitForDeployment();
@@ -55,3 +55,9 @@ deploymain()
 
 // version 10(240102 1222) -- polygon mumbai
 // 0x292877123Eb02aaEA4acab93076D0Cf927EEc45C
+
+// version 11(240102 2136) -- polygon mumbai
+// 0xe4b4cC898529f42F198799EFFAEC09E3db389bBc
+
+// version 12(240105 1924) -- polygon mumbai
+// 0xa02a9dc228cB4028140eF799E4111b4281aDEB10
