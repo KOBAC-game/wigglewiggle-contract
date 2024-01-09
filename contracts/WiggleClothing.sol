@@ -30,7 +30,7 @@ contract WiggleClothing is ERC721URIStorage, Ownable{
     
     event TokenURISet(uint256 tokenId, string indexed clothingURI);
 
-    constructor() ERC721("WiggleFree", "WGGFR") {}
+    constructor() ERC721("WiggleClothing", "WGGCTH") {}
 
     function registerClothingInfo(address _creator, string memory _clothingURI, string memory _clothingName ,uint _clothingPrice,uint _tokenId) public payable {
         _creatorOfClothingURI[_clothingURI]= _creator;

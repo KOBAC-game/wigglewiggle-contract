@@ -1028,8 +1028,8 @@
       ]
     },
     "/Users/tinasmac/Desktop/wigglewiggle-contract/contracts/WiggleClothing.sol": {
-      "lastModificationDate": 1704747702589,
-      "contentHash": "2b49f1e7427c7fc31523955180b84b65",
+      "lastModificationDate": 1704750030581,
+      "contentHash": "e1c182e0557bea6ddcea59eabf7a64cb",
       "sourceName": "contracts/WiggleClothing.sol",
       "solcConfig": {
         "version": "0.8.19",
@@ -1065,6 +1065,46 @@
       ],
       "artifacts": [
         "WiggleClothing"
+      ]
+    },
+    "/Users/tinasmac/Desktop/wigglewiggle-contract/contracts/WiggleFreeClothing.sol": {
+      "lastModificationDate": 1704750780425,
+      "contentHash": "7c3991fac9732898ce098a60589880f7",
+      "sourceName": "contracts/WiggleFreeClothing.sol",
+      "solcConfig": {
+        "version": "0.8.19",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/token/ERC721/ERC721.sol",
+        "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol",
+        "@openzeppelin/contracts/access/Ownable.sol",
+        "@openzeppelin/contracts/utils/Counters.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.9"
+      ],
+      "artifacts": [
+        "WiggleFreeClothing"
       ]
     }
   }
